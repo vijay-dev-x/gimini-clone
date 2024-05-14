@@ -99,7 +99,7 @@ export default function Body() {
               value={input}
               onChange={(e) => setInput(e.target.value)}
               type="text"
-              className=" md:text-start text-center py-5 bg-transparent w-[90%] outline-none "
+              className=" md:text-start md:py-5 py-2 bg-transparent w-[90%] outline-none "
               placeholder="Your prompt here"
             />
             <p

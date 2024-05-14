@@ -14,7 +14,7 @@ import {
 import React, { useContext, useState } from "react";
 
 export default function Sidebar() {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   const {
     setDisplayResult,
     prevPrompts,
@@ -43,13 +43,13 @@ export default function Sidebar() {
     setDisplayResult(false);
   };
   return (
-    <div className="flex flex-col w-[70%] md:w-auto justify-between min-h-[100vh] bg-zinc-900 p-2 md:p-5 ">
+    <div className="flex flex-col md:w-auto justify-between min-h-[100vh] bg-zinc-900 p-2 md:p-5 ">
       <div>
         <Menu
           className="  hidden md:block hover:text-white text-white/60 cursor-pointer"
           // for lg screen
           onClick={sidebarHandler}
-          size={40}
+          size={35}
         ></Menu>
         <Menu
           className=" md:hidden block hover:text-white text-white/60 cursor-pointer"
@@ -59,7 +59,7 @@ export default function Sidebar() {
         ></Menu>
         <div
           onClick={newChatHandler}
-          className=" flex hover:bg-zinc-700 gap-2  my-10 bg-zinc-800 justify-center px-5 py-3 rounded-full cursor-pointer"
+          className=" flex hover:bg-zinc-700 gap-2  my-10 bg-zinc-800 justify-center md:px-5 px-3 md:py-3  py-2 rounded-full cursor-pointer"
         >
           {isOpen ? <p className=" whitespace-nowrap">New chat</p> : null}
           <Plus></Plus>
