@@ -4,7 +4,7 @@ import React from "react";
 
 export default function page() {
   return (
-    <div className=" flex">
+    <div className=" h-[100vh] overflow-hidden flex">
       <Sidebar></Sidebar>
       <Body></Body>
     </div>
